@@ -1,0 +1,6 @@
+# Kafka connect setup
+
+FROM confluentinc/cp-kafka-connect:7.1.0-1-ubi8
+
+RUN confluent-hub install --no-prompt neo4j/kafka-connect-neo4j:2.0.2
+RUN confluent-hub install --no-prompt snowflakeinc/snowflake-kafka-connector:2.1.2
